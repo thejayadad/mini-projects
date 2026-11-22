@@ -4,82 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Field Notes</title>
-  <style>
-    body {
-      margin: 40px 16px;
-      background: #171717;
-      color: #f0ede7;
-      font-family: system-ui, sans-serif;
-    }
-
-    main { max-width: 720px; margin: auto; }
-    h1 { font-size: 2rem; font-weight: 500; }
-
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    #featured { aspect-ratio: 16 / 10; }
-
-    .thumbnails {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    button {
-      padding: 3px;
-      border: 1px solid transparent;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    button[aria-pressed="true"] { border-color: #f0ede7; }
-    button img { aspect-ratio: 3 / 2; }
-  </style>
+    <Link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
     <h1>Field Notes</h1>
-
-    <img id="featured"
-         src="https://images.pexels.com/photos/31914417/pexels-photo-31914417.jpeg?w=1000"
-         alt="Mountain lake beyond a wooden fence">
-
-    <div class="thumbnails">
-      <button type="button" aria-pressed="true">
-        <img src="https://images.pexels.com/photos/31914417/pexels-photo-31914417.jpeg?w=1000"
-             alt="Mountain lake beyond a wooden fence">
-      </button>
-      <button type="button" aria-pressed="false">
+ </main>
+ <img id="featured" 
+          src="https://images.pexels.com/photos/31914417/pexels-photo-31914417.jpeg?w=1000"
+alt="Mountain Lake"
+ >
+ <div class="thumbnails">
+    <button type="button" aria-pressed="true">
+        <img
+        src="https://images.pexels.com/photos/31914417/pexels-photo-31914417.jpeg?w=1000"
+        alt="Mountain lake beyond a wodden fence"
+        />
+    </button>
+    <button type="button" aria-pressed="false">
         <img src="https://images.pexels.com/photos/37425215/pexels-photo-37425215.jpeg?w=1000"
-             alt="Waves breaking against a rocky coast">
-      </button>
-      <button type="button" aria-pressed="false">
-        <img src="https://images.pexels.com/photos/40560844/pexels-photo-40560844.jpeg?w=1000"
-             alt="Turquoise lake below rugged mountains">
-      </button>
-    </div>
-  </main>
+        alt="Waves breaking"/>
+    </button>
+    <button type="button" aria-pressed="false">
+        <img 
 
-  <script>
-    const featured = document.querySelector("#featured");
-    const thumbs = document.querySelectorAll(".thumbnails button");
-
-    thumbs.forEach((button) => {
-      button.addEventListener("click", () => {
-        const photo = button.querySelector("img");
-        featured.src = photo.src;
-        featured.alt = photo.alt;
-
-        document.querySelector('[aria-pressed="true"]')
-          .setAttribute("aria-pressed", "false");
-        button.setAttribute("aria-pressed", "true");
-      });
-    });
+        src="https://images.pexels.com/photos/40560844/pexels-photo-40560844.jpeg?w=1000"
+        alt="Blue lake" />
+    </button>
+ </div>
+  <script src="main.js">
+ 
   </script>
 </body>
 </html>

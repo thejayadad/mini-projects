@@ -1,0 +1,32 @@
+<!doctype html>
+<title>Corner Radius</title>
+<style>
+  body {
+    background: #18181b;
+    color: white;
+    font: 18px system-ui;
+    text-align: center;
+    padding: 40px 16px;
+  }
+  #card {
+    width: min(280px, 100%);
+    height: 150px;
+    margin: 24px auto;
+    background: #8ba4c2;
+  }
+</style>
+
+<h1>Corner Radius</h1>
+<div id="card"></div>
+<label>Radius <input id="slider" type="range" min="0" max="60" value="0"></label>
+<output id="value">0px</output>
+
+<script>
+  const slider = document.querySelector("#slider");
+  const card = document.querySelector("#card");
+  const value = document.querySelector("#value");
+
+  slider.oninput = () => {
+    card.style.borderRadius = value.textContent = slider.value + "px";
+  };
+</script>

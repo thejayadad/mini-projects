@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Contact Sheet</h1>
+
+    <section class="sheet" aria-label="Photo collection">
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/31914417/pexels-photo-31914417.jpeg?w=1200"
+             alt="Mountain lake beyond a wooden fence">
+        <span>01</span>
+      </button>
+
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/18990545/pexels-photo-18990545.jpeg?w=1200"
+             alt="Rocks at the edge of a clear mountain lake">
+        <span>02</span>
+      </button>
+
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/37425215/pexels-photo-37425215.jpeg?w=1200"
+             alt="Waves breaking against a rocky coast under clouds">
+        <span>03</span>
+      </button>
+
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/28156453/pexels-photo-28156453.jpeg?w=1200"
+             alt="Pine forest reflected in a lake">
+        <span>04</span>
+      </button>
+
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/40525154/pexels-photo-40525154.jpeg?w=1200"
+             alt="Ocean waves below rocky cliffs">
+        <span>05</span>
+      </button>
+
+      <button class="frame" type="button">
+        <img src="https://images.pexels.com/photos/40560844/pexels-photo-40560844.jpeg?w=1200"
+             alt="Turquoise lake surrounded by pines and rugged mountains">
+        <span>06</span>
+      </button>
+    </section>
+  </main>
+
+  <dialog id="viewer" aria-label="Photo preview">
+    <img id="preview" alt="">
+
+    <div class="viewer-controls">
+      <button id="previous" type="button" aria-label="Previous photo">←</button>
+      <span id="counter" aria-live="polite"></span>
+      <button id="next" type="button" aria-label="Next photo">→</button>
+
+      <form method="dialog">
+        <button type="submit" autofocus>Close</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
